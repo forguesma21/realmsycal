@@ -35,6 +35,12 @@ local.properties
 !debug.keystore
 .kotlin/
 
+# Realm coords app
+server/.env
+web/.env
+server/dist/
+web/dist/
+
 # node.js
 #
 node_modules/

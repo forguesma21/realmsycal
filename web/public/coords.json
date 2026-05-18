@@ -1,0 +1,115 @@
+{
+  "realms": [
+    {
+      "name": "realm dm",
+      "places": [
+        {
+          "name": "base",
+          "type": "base",
+          "x": -676,
+          "y": 62,
+          "z": 742,
+          "notes": "maison"
+        },
+        {
+          "name": "lush cave 1",
+          "type": "lushcave",
+          "x": -232.141,
+          "z": -20,
+          "notes": ""
+        },
+        {
+          "name": "village 1",
+          "type": "village",
+          "x": 1933,
+          "y": 64,
+          "z": 1466
+        },
+        {
+          "name": "village 2",
+          "type": "village",
+          "x": -49,
+          "y": 62,
+          "z": 1772
+        },
+        {
+          "name": "village 3",
+          "type": "village",
+          "x": 1551,
+          "y": 64,
+          "z": 1915
+        },
+        {
+          "name": "portal",
+          "type": "ruined portal",
+          "x": 110,
+          "y": 64,
+          "z": 690
+        }, {
+          "name": "cave",
+          "type": "mine",
+          "x": -391,
+          "y": 46,
+          "z": 1391,
+          "notes": "entrée desert mine, near village"
+        },
+        {
+          "name": "trial chambers 1",
+          "type": "trial chambers",
+          "x" : 2003,
+          "y":-10,
+          "z": 1960
+        },
+        {
+          "name": "acient city",
+          "type": "ancient city",
+          "x" : -598,
+          "y":-10,
+          "z": 471
+        }
+      ]
+    },
+    {
+      "name": "debauche",
+      "places": [
+        {
+          "name": "Base",
+          "type": "base",
+          "x": 120,
+          "y": 63,
+          "z": -45
+        },
+        {
+          "name": "boat",
+          "type": "shipwreck",
+          "x": 2430,
+          "y": 67,
+          "z": 539
+        },
+        {
+          "name": "village 1",
+          "type": "village",
+          "x": -369,
+          "y": 65,
+          "z": 1361,
+          "notes": "desert village"
+        },
+        {
+          "name": "pillager 1",
+          "type": "pillager",
+          "x": 395,
+          "y": 62,
+          "z": 1029,
+          "notes": ""
+        },
+        {
+          "name": "monument",
+          "type": "ocean monument",
+          "x": 18,
+          "y": 63,
+          "z": 1900
+        }
+      ]
+    }
+  ]
+}

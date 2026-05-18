@@ -1,97 +1,78 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🗺️ Realmsycal
 
-# Getting Started
+> *Wander freely, for Realmsycal remembers.* 🧭✨
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+A whimsical local companion for Minecraft explorers — save, name, and revisit every magical coordinate across your realms 🌍🍄
 
-## Step 1: Start Metro
+---
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## ✨ What is it?
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+Realmsycal lets you **centralize all your important Minecraft coordinates** (X, Y, Z) in one cozy place 📖, organized by realm. No more scattered screenshots or forgotten notes — your bases, villages, strongholds and secret caves all live here. Designed to be used **in your browser while you play** 🎮, especially on mobile 📱.
 
-```sh
-# Using npm
-npm start
+---
 
-# OR using Yarn
-yarn start
+## 🏰 Features
+
+- 🌐 **Multiple realms** — switch between your worlds from the selector at the top of the screen
+- 📋 **Places list** — name, coordinates and notes for every saved location
+- 🎨 **Filter by type** — show only villages, bases, strongholds, etc. (colored tags)
+- 🗺️ **X/Z map view** — flat map with markers positioned by X and Z ; Y stays visible in the list
+- 📱 **Mobile-friendly** — list and map accessible via floating button on small screens
+- 🔄 **Reload data** — button to re-read the coordinates file after any changes
+
+---
+
+## 📂 Supported Formats
+
+### JSON file (`coords.json`)
+
+Data is read from a **JSON** file structured like this:
+
+```json
+{
+  "realms": [
+    {
+      "id": "my-realm",
+      "name": "My Realm",
+      "places": [
+        {
+          "name": "My Base",
+          "type": "base",
+          "x": -676,
+          "y": 62,
+          "z": 742,
+          "notes": "Nether portal nearby"
+        }
+      ]
+    }
+  ]
+}
 ```
 
-## Step 2: Build and run your app
+| Field | Required | Description |
+|-------|----------|-------------|
+| `name` or `label` | ✅ | Display name of the place |
+| `x`, `z` | ✅ | Horizontal coordinates (numbers) |
+| `y` | ❌ | Height — can be omitted |
+| `type` | ❌ | Place type (see below) |
+| `notes` | ❌ | Free text notes |
+| `id` | ❌ | Stable identifier — auto-generated if omitted |
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+Default file location: `web/public/coords.json`
 
-### Android
+---
 
-```sh
-# Using npm
-npm run android
+## 🏷️ Place Types
 
-# OR using Yarn
-yarn android
-```
+Recognized values for the `type` field (each gets a dedicated color and filter) :
 
-### iOS
+`spawn` 🌱 `village` 🏘️ `ancient city` 🏚️ `stronghold` 🔮 `lush cave` 🌿 `base` 🏠 `ocean monument` 🌊 `pillager` ⚔️ `shipwreck` ⚓ `jungle temple` 🌴 `desert temple` 🏜️ `mineshaft` ⛏️ `trial chambers` 🗝️ `ruined portal` 🌀 `mine` 🪨 `divers` 🎒
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+> Custom types are also accepted — they'll display with a neutral color 🎨
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+---
 
-```sh
-bundle install
-```
+## 🛠️ For Developers
 
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Local installation, Express/MongoDB API and React Native app — see [docs/DEVELOPPEMENT.md](docs/DEVELOPPEMENT.md) 📄
