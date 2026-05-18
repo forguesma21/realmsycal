@@ -1,7 +1,7 @@
 import { canonicalPlaceType } from './placeTypes';
 import type { Pin, Realm } from './types';
 
-export const COORDS_URL = '/coords.json';
+export const COORDS_URL = `${import.meta.env.BASE_URL}coords.json`;
 
 /** Shape of `web/public/coords.json` — edit this file to add realms and places. */
 export type CoordsFile = {
